@@ -1,0 +1,172 @@
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+    color: #39FF14;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1e1e1e;
+    color: red;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    color: red;
+}
+
+header h2 {
+    margin-top: 0;
+    font-weight: normal;
+    color: red;
+}
+
+nav {
+    background-color: #1a0505;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+}
+
+@keyframes navGlow {
+    0% {
+        text-shadow: 0 0 5px #1BFFFF, 0 0 10px #1BFFFF, 0 0 15px #1BFFFF;
+    }
+    50% {
+        text-shadow: 0 0 15px #1BFFFF, 0 0 20px #1BFFFF, 0 0 25px #1BFFFF;
+    }
+    100% {
+        text-shadow: 0 0 5px #1BFFFF, 0 0 10px #1BFFFF, 0 0 15px #1BFFFF;
+    }
+}
+
+nav ul li a {
+    display: block;
+    color: #1BFFFF;
+    text-decoration: none;
+    padding: 14px 20px;
+    animation: navGlow 2s infinite;
+}
+
+nav ul li a:hover {
+    background-color: #1d0202;
+}
+
+main {
+    padding: 20px;
+}
+
+main h2 {
+    color: red;
+    border-bottom: 2px solid red;
+    padding-bottom: 10px;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.step {
+    margin-bottom: 40px;
+    color: #39FF14;
+}
+
+.step h3 {
+    color: red;
+    margin-top: 40px;
+}
+
+.step img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #DDA0DD, 0 0 20px #DDA0DD, 0 0 30px #DDA0DD;
+        color: #DDA0DD;
+    }
+    50% {
+        text-shadow: 0 0 20px #EE82EE, 0 0 30px #EE82EE, 0 0 40px #EE82EE;
+        color: #EE82EE;
+    }
+    100% {
+        text-shadow: 0 0 10px #800080, 0 0 20px #800080, 0 0 30px #800080;
+        color: #800080;
+    }
+}
+
+.tip {
+    background-color: #2E2E2E;
+    border-left: 6px solid #8A2BE2;
+    color: #EE82EE;
+    padding: 10px;
+    margin-top: 20px;
+    animation: glow 4s infinite;
+}
+
+.tip strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #EE82EE;
+    animation: glow 4s infinite;
+}
+
+@keyframes footerGlow {
+    0% {
+        text-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 15px #39FF14;
+    }
+    50% {
+        text-shadow: 0 0 15px #39FF14, 0 0 20px #39FF14, 0 0 25px #39FF14;
+    }
+    100% {
+        text-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 15px #39FF14;
+    }
+}
+
+footer {
+    background-color: #1e1e1e;
+    text-align: center;
+    padding: 20px;
+    color: #39FF14;
+    margin-top: 40px;
+}
+
+footer p {
+    animation: footerGlow 2s infinite;
+}
+
+.faq {
+    margin-bottom: 20px;
+}
+
+.faq h4 {
+    color: red;
+}
+
+.faq p {
+    margin-left: 20px;
+    color: #39FF14;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 40px;
+    color: #39FF14;
+}
+
+li {
+    margin-bottom: 10px;
+}

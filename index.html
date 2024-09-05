@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ignition Cut-Off System Installation Guide for 2013 Dodge Dart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Ignition Cut-Off System Installation Guide</h1>
+        <h2>For 2013 Dodge Dart 2.0L</h2>
+        <p>A Step-by-Step Guide to Customizing Your Ignition Control</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#overview">Overview & Purpose</a></li>
+            <li><a href="#materials">Tools & Materials</a></li>
+            <li><a href="#steps">Step-by-Step Instructions</a></li>
+            <li><a href="#checklist">Final Checklist</a></li>
+            <li><a href="#troubleshooting">Troubleshooting Guide</a></li>
+        </ul>
+    </nav>
+
+    <main>
+      
+        <section id="overview">
+            <h2>Overview & Purpose</h2>
+            <p>This guide provides a comprehensive walkthrough for installing a custom ignition cut-off system on your 2013 Dodge Dart 2.0L. By following these steps, you'll be able to manually control your engine's ignition using a push button inside your car, enabling features like launch control or two-step functionality.</p>
+            <img src="images/dodge-dart.jpg" alt="2013 Dodge Dart">
+        </section>
+
+        <section id="materials">
+            <h2>Tools & Materials Needed</h2>
+            <h3>Tools:</h3>
+            <ul>
+                <li>Wire Stripper/Cutter</li>
+                <li>Screwdrivers</li>
+                <li>Multimeter</li>
+                <li>Soldering Iron (optional)</li>
+                <li>Heat Gun (optional)</li>
+            </ul>
+            <h3>Materials:</h3>
+            <ul>
+                <li>5-Pin Relay (1)</li>
+                <li>Push Button Switch (1)</li>
+                <li>12V Power Wire (Red)</li>
+                <li>Ground Wire (Black)</li>
+                <li>Signal Wire (Dark Green/Orange)</li>
+                <li>Wire Connectors</li>
+                <li>Heat Shrink Tubing</li>
+                <li>Fuse Tap (optional)</li>
+                <li>Wire Loom (optional)</li>
+                <li>Electrical Tape</li>
+            </ul>
+        </section>
+
+        <section id="steps">
+            <h2>Step-by-Step Installation</h2>
+            
+            <div class="step">
+                <h3>Step 1: Identify the Signal Wire</h3>
+                <p>Locate the ignition coil pack in your engine bay. Identify the signal wire on each coil pack, which is typically the dark green/orange wire (rightmost wire on the connector).</p>
+                <img src="images/signal-wire.jpg" alt="Identifying the Signal Wire">
+            </div>
+
+            <div class="step">
+                <h3>Step 2: Cut the Signal Wire</h3>
+                <p>Ensure the engine is off and the battery is disconnected. Carefully cut the signal wire on each ignition coil, leaving enough length on both ends to connect to the relay.</p>
+                <img src="images/cut-wire2.jpg" alt="Cutting the Signal Wire"> 
+                <div class="tip">
+                    <strong>Safety Tip:</strong> Always disconnect the battery before cutting any wires to prevent electrical shock or short circuits.
+                </div>
+                    <img src="images/cut-wire.jpg">
+           </div>
+
+            <div class="step">
+                <h3>Step 3: Wiring the 5-Pin Relay</h3>
+                <p>Wire the relay as follows:</p>
+                <ul>
+                    <li><strong>Pin 85 (Ground):</strong> Connect to a solid ground point.</li>
+                    <li><strong>Pin 86 (Trigger):</strong> Connect to the push button's trigger wire.</li>
+                    <li><strong>Pin 30 (From ECU):</strong> Connect to the ECU side of the cut signal wires.</li>
+                    <li><strong>Pin 87a (To Coils):</strong> Connect to the coil side of the cut signal wires.</li>
+                    <li><strong>Pin 87:</strong> Not used in this setup.</li>
+                </ul>
+                <img src="images/relay-wiring.jpg" alt="Relay Wiring Diagram">
+            </div>
+
+            <div class="step">
+                <h3>Step 4: Installing the Push Button Inside the Car</h3>
+                <p>Choose a convenient location inside your car to mount the push button. Wire the button as follows:</p>
+                <ul>
+                    <li><strong>Terminal 1:</strong> Connect to a 12V ignition power source (use a fuse tap if necessary).</li>
+                    <li><strong>Terminal 2:</strong> Connect to Pin 86 on the relay.</li>
+                </ul>
+                <img src="images/push-button.jpg" alt="Installing the Push Button">
+                <div class="tip">
+                    <strong>Tip:</strong> Use a grommet when routing wires through the firewall to protect them from damage.
+                </div>
+            </div>
+
+            <div class="step">
+                <h3>Step 5: Testing the System</h3>
+                <p>Reconnect the battery and start your car. Press the push button to activate the ignition cut-off system. The engine should either stall or limit RPMs based on your setup. Release the button to resume normal operation.</p>
+                <img src="images/testing-system.jpg" alt="Testing the System">
+                <div class="tip">
+                    <strong>Troubleshooting:</strong> If the system doesn't work as expected, double-check all connections and ensure the relay is functioning properly.
+                </div>
+            </div>
+        </section>
+
+        <section id="checklist">
+            <h2>Final Checklist</h2>
+            <ul>
+                <li>All connections are secure and insulated.</li>
+                <li>Push button is correctly wired and mounted.</li>
+                <li>Relay is properly wired and grounded.</li>
+                <li>Wires are protected and routed safely.</li>
+                <li>System has been tested and functions as intended.</li>
+            </ul>
+        </section>
+
+        <section id="troubleshooting">
+            <h2>Troubleshooting Guide</h2>
+            <div class="faq">
+                <h4>Issue: Engine doesn't start after installation.</h4>
+                <p><strong>Solution:</strong> Check that the signal wires are properly connected through the relay and that all grounds are secure.</p>
+            </div>
+            <div class="faq">
+                <h4>Issue: Push button doesn't activate the cut-off system.</h4>
+                <p><strong>Solution:</strong> Ensure the button is receiving 12V power and that the trigger wire to Pin 86 is connected.</p>
+            </div>
+            <div class="faq">
+                <h4>Issue: Engine cuts off unexpectedly.</h4>
+                <p><strong>Solution:</strong> Inspect the relay for any faults and verify that the wiring matches the schematic.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 J Turner. | All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
