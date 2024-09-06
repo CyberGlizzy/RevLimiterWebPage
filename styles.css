@@ -8,7 +8,7 @@ body {
 
 header {
     background-color: #1e1e1e;
-    color: red;
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 40px 20px;
 }
@@ -93,6 +93,70 @@ main h2 {
     margin-top: 20px;
 }
 
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.interactive-diagram:hover .tooltip {
+    display: block;
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
+.test-button {
+    padding: 10px 20px;
+    background-color: #39FF14;
+    border: none;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px #39FF14;
+    }
+    50% {
+        box-shadow: 0 0 20px #39FF14;
+    }
+    100% {
+        box-shadow: 0 0 10px #39FF14;
+    }
+}
+
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background-color: #39FF14;
+    width: 0%;
+    z-index: 9999;
+}
+
+body.light-mode {
+    background-color: white;
+    color: black;
+}
+
+.light-mode header, .light-mode nav, .light-mode footer {
+    background-color: #f4f4f4;
+    color: black;
+}
+
 @keyframes glow {
     0% {
         text-shadow: 0 0 10px #DDA0DD, 0 0 20px #DDA0DD, 0 0 30px #DDA0DD;
@@ -147,6 +211,7 @@ footer {
 footer p {
     animation: footerGlow 2s infinite;
 }
+
 
 .faq {
     margin-bottom: 20px;

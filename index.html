@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self';">
-<meta http-equiv="X-Frame-Options" content="DENY">
-<meta http-equiv="X-XSS-Protection" content="1; mode=block">
-<meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta name="referrer" content="no-referrer">
- 
     <meta charset="UTF-8">
     <title>Ignition Cut-Off System Installation Guide for 2013 Dodge Dart</title>
     <link rel="stylesheet" href="styles.css">
@@ -20,6 +13,8 @@
         <p>A Step-by-Step Guide to Customizing Your Ignition Control</p>
     </header>
 
+    <div id="progress-bar"></div>
+
     <nav>
         <ul>
             <li><a href="#overview">Overview & Purpose</a></li>
@@ -31,11 +26,28 @@
     </nav>
 
     <main>
-      
         <section id="overview">
             <h2>Overview & Purpose</h2>
             <p>This guide provides a comprehensive walkthrough for installing a custom ignition cut-off system on your 2013 Dodge Dart 2.0L. By following these steps, you'll be able to manually control your engine's ignition using a push button inside your car, enabling features like launch control or two-step functionality.</p>
-            <img src="images/dodge-dart.jpg" alt="2013 Dodge Dart">
+            <p>The purpose of this modification is to introduce a manual override of the engine’s ignition system, which can be used for features like launch control, anti-lag systems, or basic two-step functionality. By following this guide, users will be able to safely and effectively install a customizable ignition cut-off system with minimal components and technical knowledge.</p>
+            <p>The instructions are designed to be simple yet detailed, ensuring that users with varying levels of experience can confidently complete the installation.</p>
+            <div class="parallax" style="background-image: url('images/dodge-dart.jpg');"></div>
+        </section>
+
+        <section id="education">
+            <h2>Education Standards</h2>
+            <p>This project aligns with hands-on technical skills development, emphasizing automotive wiring and system modification. It reinforces concepts of circuit design, relay functionality, and practical electrical troubleshooting in automotive applications.</p>
+        </section>
+
+        <section id="objectives">
+            <h2>Objectives</h2>
+            <ul>
+                <li>Understand and identify key components in the ignition system of a 2013 Dodge Dart.</li>
+                <li>Learn how to safely cut and intercept the ignition signal wire.</li>
+                <li>Properly wire and install a 5-pin relay for ignition control.</li>
+                <li>Install and configure a manual push button to control the system.</li>
+                <li>Safely test and verify the functionality of the ignition cut-off system.</li>
+            </ul>
         </section>
 
         <section id="materials">
@@ -50,49 +62,49 @@
             </ul>
             <h3>Materials:</h3>
             <ul>
-                <li>5-Pin Relay (1)</li>
-                <li>Push Button Switch (1)</li>
-                <li>12V Power Wire (Red)</li>
-                <li>Ground Wire (Black)</li>
-                <li>Signal Wire (Dark Green/Orange)</li>
-                <li>Wire Connectors</li>
-                <li>Heat Shrink Tubing</li>
-                <li>Fuse Tap (optional)</li>
-                <li>Wire Loom (optional)</li>
-                <li>Electrical Tape</li>
+                <li>5-Pin automotive relay (1)</li>
+                <li>Push button switch (1)</li>
+                <li>12V power wire (Red) (sufficient length to run from the fuse box to the relay)</li>
+                <li>Ground wire (Black) (sufficient length)</li>
+                <li>Signal wire (Green/Light-Green) (as needed for intercepting ignition signals)</li>
+                <li>Wire connectors, heat shrink tubing, and grommets (varied quantities)</li>
+                <li>Fuse tap (1, optional)</li>
+                <li>Wire loom (optional, for running wires through the firewall)</li>
             </ul>
         </section>
 
         <section id="steps">
             <h2>Step-by-Step Installation</h2>
-            
+
             <div class="step">
                 <h3>Step 1: Identify the Signal Wire</h3>
-                <p>Locate the ignition coil pack in your engine bay. Identify the signal wire on each coil pack, which is typically the dark green/orange wire (rightmost wire on the connector).</p>
+                <p>Locate the ignition coil pack in your engine bay. Identify the signal wire on each coil pack, which is typically the **Green/Light-Green** wire (rightmost wire on the connector).</p>
                 <img src="images/signal-wire.jpg" alt="Identifying the Signal Wire">
             </div>
 
             <div class="step">
                 <h3>Step 2: Cut the Signal Wire</h3>
-                <p>Ensure the engine is off and the battery is disconnected. Carefully cut the signal wire on each ignition coil, leaving enough length on both ends to connect to the relay.</p>
+                <p>Ensure the engine is off and the battery is disconnected. Carefully cut the signal wire (Green/Light-Green) on each ignition coil, leaving enough length on both ends to connect to the relay.</p>
                 <img src="images/cut-wire2.jpg" alt="Cutting the Signal Wire"> 
                 <div class="tip">
                     <strong>Safety Tip:</strong> Always disconnect the battery before cutting any wires to prevent electrical shock or short circuits.
                 </div>
-                    <img src="images/cut-wire.jpg">
-           </div>
+                <img src="images/cut-wire.jpg">
+            </div>
 
-            <div class="step">
+            <div class="step interactive-diagram">
                 <h3>Step 3: Wiring the 5-Pin Relay</h3>
                 <p>Wire the relay as follows:</p>
                 <ul>
                     <li><strong>Pin 85 (Ground):</strong> Connect to a solid ground point.</li>
                     <li><strong>Pin 86 (Trigger):</strong> Connect to the push button's trigger wire.</li>
-                    <li><strong>Pin 30 (From ECU):</strong> Connect to the ECU side of the cut signal wires.</li>
-                    <li><strong>Pin 87a (To Coils):</strong> Connect to the coil side of the cut signal wires.</li>
+                    <li><strong>Pin 30 (From ECU):</strong> Connect to the **Yellow/Brown** wire from the ignition coil.</li>
+                    <li><strong>Pin 87a (To Coils):</strong> Connect to the **Green/Light-Green** signal wire from the coil.</li>
                     <li><strong>Pin 87:</strong> Not used in this setup.</li>
                 </ul>
                 <img src="images/relay-wiring.jpg" alt="Relay Wiring Diagram">
+                <div id="pin85" class="tooltip">Pin 85: Connect to Ground.</div>
+                <div id="pin86" class="tooltip">Pin 86: Connect to Button Trigger Wire.</div>
             </div>
 
             <div class="step">
@@ -115,40 +127,73 @@
                 <div class="tip">
                     <strong>Troubleshooting:</strong> If the system doesn't work as expected, double-check all connections and ensure the relay is functioning properly.
                 </div>
+                <button class="test-button" id="test-system">Test System</button>
             </div>
         </section>
 
-        <section id="checklist">
-            <h2>Final Checklist</h2>
+        <section id="verification">
+            <h2>Verification</h2>
+            <p>Steps to check for user understanding:</p>
             <ul>
-                <li>All connections are secure and insulated.</li>
-                <li>Push button is correctly wired and mounted.</li>
-                <li>Relay is properly wired and grounded.</li>
-                <li>Wires are protected and routed safely.</li>
-                <li>System has been tested and functions as intended.</li>
+                <li>Can the user correctly identify the ignition signal wire (Green/Light-Green) on the coil pack?</li>
+                <li>Can they explain the purpose of each pin on the relay (Pin 85, 86, 30, 87a)?</li>
+                <li>Can the user safely route wires through the firewall and connect the push button inside the car?</li>
+                <li>Does the user understand how the push button interacts with the relay to control the ignition?</li>
             </ul>
         </section>
 
-        <section id="troubleshooting">
-            <h2>Troubleshooting Guide</h2>
-            <div class="faq">
-                <h4>Issue: Engine doesn't start after installation.</h4>
-                <p><strong>Solution:</strong> Check that the signal wires are properly connected through the relay and that all grounds are secure.</p>
-            </div>
-            <div class="faq">
-                <h4>Issue: Push button doesn't activate the cut-off system.</h4>
-                <p><strong>Solution:</strong> Ensure the button is receiving 12V power and that the trigger wire to Pin 86 is connected.</p>
-            </div>
-            <div class="faq">
-                <h4>Issue: Engine cuts off unexpectedly.</h4>
-                <p><strong>Solution:</strong> Inspect the relay for any faults and verify that the wiring matches the schematic.</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2023 J Turner. | All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
+        <section id="activity">
+            <h2>Activity</h2>
+            <p>The user will practice intercepting the ignition signal wire and wiring a relay on a mock circuit board before attempting it on the vehicle. They will complete the installation on their vehicle, from cutting the ignition signal wire to testing the push button's functionality with the relay.</p>
+            <p>The final step
+                will involve troubleshooting and testing, ensuring that the push button successfully cuts off the ignition when activated.</p>
+            </section>
+    
+            <section id="checklist">
+                <h2>Final Checklist</h2>
+                <ul>
+                    <li>All connections are secure and insulated.</li>
+                    <li>Push button is correctly wired and mounted.</li>
+                    <li>Relay is properly wired and grounded.</li>
+                    <li>Wires are protected and routed safely.</li>
+                    <li>System has been tested and functions as intended.</li>
+                </ul>
+            </section>
+    
+            <section id="quiz">
+                <h2>Quiz: Test Your Knowledge</h2>
+                <p>1. What does Pin 85 on the relay connect to?</p>
+                <input type="radio" name="question1" value="Ground"> Ground<br>
+                <input type="radio" name="question1" value="Power"> Power<br>
+                <input type="radio" name="question1" value="Signal"> Signal<br>
+                <button onclick="checkAnswers()">Submit</button>
+            </section>
+            <div id="quiz-result"></div>
+    
+            <section id="troubleshooting">
+                <h2>Troubleshooting Guide</h2>
+                <div class="faq">
+                    <h4>Issue: Engine doesn't start after installation.</h4>
+                    <p><strong>Solution:</strong> Check that the signal wires are properly connected through the relay and that all grounds are secure.</p>
+                </div>
+                <div class="faq">
+                    <h4>Issue: Push button doesn't activate the cut-off system.</h4>
+                    <p><strong>Solution:</strong> Ensure the button is receiving 12V power and that the trigger wire to Pin 86 is connected.</p>
+                </div>
+                <div class="faq">
+                    <h4>Issue: Engine cuts off unexpectedly.</h4>
+                    <p><strong>Solution:</strong> Inspect the relay for any faults and verify that the wiring matches the schematic.</p>
+                </div>
+            </section>
+        </main>
+    
+        <footer>
+            <p>&copy; 2023 J Turner. | All rights reserved.</p>
+            <button id="toggle-theme">Switch to Light Mode</button>
+        </footer>
+    
+        <script src="script.js"></script>
+    
+    </body>
+    </html>
+    
